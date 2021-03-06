@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import './vars'
+    
+@font-face 
+    font-family: Montserrat-Regular
+    src: url('../src/assets/fonts/Montserrat-Regular.ttf')
+@font-face 
+    font-family: Montserrat-Bold
+    src: url('../src/assets/fonts/Montserrat-Bold.ttf')
+    
+*
+    margin: 0
+
+html 
+    height: 100%
+    
+body 
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    height: 100%
+    background: $bold_background
+
+.component_container
+    padding: 45px
+
+    @media screen and ( max-width: $breakpoint_phone )
+        padding: 30px
+        
+
+.component_body
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    position: relative

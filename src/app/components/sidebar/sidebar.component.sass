@@ -1,0 +1,56 @@
+@import '../../../vars'
+
+
+.navbar 
+    height: 100vh
+    width: 250px
+    background: $secondary_gradient
+    font-family: Montserrat-Regular
+    display: flex
+    flex-wrap: wrap
+    position: absolute
+    z-index: 999
+
+
+    @media screen and ( min-width: $breakpoint_phone )
+        display: none
+
+    .navbar_container
+        height: 100%
+        width: 100%
+        display: flex
+        flex-direction: column
+        color: white
+        padding: 26px 7px
+
+    .navbar_options
+        list-style: none
+
+    .navbar_options > li
+        margin-bottom: 15px
+    
+
+    &.slide_right
+        box-shadow: 8px 6px 14px rgb(0 0 0 / 39%)
+        -webkit-animation: 0.5s slide-right ease-out
+        -moz-animation: 0.5s slide-right ease-out
+        animation: 0.5s slide-right ease-out
+
+    
+    &.slide_left
+        -webkit-animation: 0.5s slide-left forwards
+        -moz-animation: 0.5s slide-left forwards
+        animation: 0.5s slide-left forwards
+
+@keyframes slide-right
+    0% 
+        margin-left: -250px
+    100% 
+        margin-left: 0px
+        
+@keyframes slide-left
+    0% 
+        margin-left: 0px
+    100% 
+        margin-left: -250px
+        

@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?1ky8cf');
+  src:  url('fonts/icomoon.eot?1ky8cf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1ky8cf') format('truetype'),
+    url('fonts/icomoon.woff?1ky8cf') format('woff'),
+    url('fonts/icomoon.svg?1ky8cf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mastercard:before {
+  content: "\e904";
+  color: #eb001b;
+}
+.icon-calculator:before {
+  content: "\e903";
+}
+.icon-close:before {
+  content: "\e902";
+}
+.icon-info:before {
+  content: "\e900";
+}
+.icon-help:before {
+  content: "\e901";
+}
+.icon-equalizer:before {
+  content: "\e993";
+}
+.icon-link:before {
+  content: "\e9cb";
+}

@@ -1,0 +1,50 @@
+@import '../../../vars'
+
+.bold_header
+    min-height: 80px
+    width: 100%
+    background: $principal_gradient
+    color: white
+    font-family: Montserrat-Regular
+    display: flex
+    flex-wrap: wrap
+
+    .header_container
+        padding: 23px 43px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        flex-wrap: wrap
+
+        @media screen and ( max-width: $breakpoint_phone )
+            padding: 10px 20px
+
+        .logo_area
+            display: flex
+
+            .hamburger_icon
+                width: 30px
+                margin: auto 20px auto 0px
+                display: none
+
+                @media screen and ( max-width: $breakpoint_phone )
+                    display: block
+                div
+                    height: 3px
+                    background-color: white
+                    margin: 6px 0
+
+            img
+                width: 100px
+                height: auto
+
+        .header-options
+            display: flex
+            list-style: none
+            width: 200px
+            justify-content: space-between
+            flex-wrap: wrap
+
+            @media screen and ( max-width: $breakpoint_phone )
+                display: none

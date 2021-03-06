@@ -1,0 +1,135 @@
+<div class="component_body">
+  <div class="tf_container">
+    <div class="card_total">
+      <div class="card_header">
+        <span class="title"
+          >Total de ventas de {{ selectedDateOption.name }}
+          <span class="icon-info"></span
+        ></span>
+      </div>
+      <div class="card_container">
+        <h1 class="total">
+          {{ totalSales | currency: "USD":"symbol":"1.0-0" }}
+        </h1>
+        <h2 class="date">
+          {{ currentMonth }}
+          {{ selectedDateOption.id === 1 ? currentDay : currentYear }}
+        </h2>
+      </div>
+    </div>
+    <div class="filter_container">
+      <div class="timef_container">
+        <div
+          class="timef_option"
+          *ngFor="let date of dateOptions"
+          (click)="selectOptionDate(date); orderByFilters()"
+          [ngClass]="{ active: date.id == selectedDateOption.id }"
+        >
+          <span style="text-transform: capitalize"> {{ date.name }}</span>
+        </div>
+      </div>
+      <div class="filter_container_button">
+        <div
+          class="filter_button"
+          (click)="
+            menuFilterActive
+              ? (menuFilterActive = false)
+              : (menuFilterActive = true)
+          "
+        >
+          <span>FILTRAR</span>
+          <span
+            *ngIf="!menuFilterActive"
+            class="equalizer icon-equalizer"
+          ></span>
+          <span *ngIf="menuFilterActive" class="close icon-close"></span>
+        </div>
+
+        <div
+          class="filter_options"
+          [ngClass]="{
+            swipe_down: menuFilterActive,
+            swipe_up: !menuFilterActive
+          }"
+        >
+          <div class="options_container">
+            <label
+              *ngFor="let option of filterOptions"
+              (click)="selectOptionFilter(option)"
+            >
+              <div
+                class="square"
+                [ngClass]="{ active: option.id == selectedFilterOption.id }"
+              ></div>
+              {{ option.name }}
+            </label>
+          </div>
+          <div class="button_container">
+            <button
+              class="filter_apply"
+              (click)="orderByFilters(); menuFilterActive = false"
+            >
+              Aplicar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table_container">
+    <div class="table_header">Transacciones {{ selectedDateOption.name }}</div>
+    <div class="table_card">
+      <table class="bold_table">
+        <thead>
+          <tr>
+            <th>Transacción</th>
+            <th>Fecha y hora</th>
+            <th>Método de pago</th>
+            <th>ID transacción Bold</th>
+            <th>Monto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sale of filteredSaleList">
+            <td class="transaction">
+              <span
+                [ngClass]="{
+                  'icon-calculator': sale.paymentTypeId == 1,
+                  'icon-link': sale.paymentTypeId == 2
+                }"
+              ></span>
+              {{ sale.paymentStatus ? "Cobro Exitoso" : "Cobro no realizado" }}
+            </td>
+            <td class="info">
+              {{ sale.date | date: "dd/mm/yyyy - hh:mm:ss" }}
+            </td>
+            <td class="info">
+              <span class="icon icon-mastercard"></span> ***************
+              {{
+                sale.paymentMethod.number
+                  .toString()
+                  .substr(sale.paymentMethod.number.toString().length - 4)
+              }}
+            </td>
+            <td class="info">{{ sale.id }}</td>
+            <td class="amount">
+              <span class="value">{{
+                sale.value | currency: "USD":"symbol":"1.0-0"
+              }}</span
+              ><br />
+              <div *ngIf="sale.deduction">
+                <span class="amount_info">Descuento</span><br />
+                <span class="substract"
+                  >-{{
+                    sale.deduction | currency: "USD":"symbol":"1.0-0"
+                  }}</span
+                >
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
