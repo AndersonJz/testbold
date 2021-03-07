@@ -25,7 +25,7 @@ Para ejecutar este proyecto en modo developer debemos estar en la carpeta raíz 
 
 ## Sobre la prueba
 
-Elegí Angular ya que es el framework en que tengo más experiencia, para los estilos se escogió el precompilador SASS por su manejo de variables y su escritura basada en identación, El JSON para la prueba se encuentra en la ruta `.../testbold/src/app/data/sales.ts`, utilizado a través de servicios para simular el query a un API.
+Elegí Angular ya que es el framework en que tengo más experiencia, para los estilos se escogió el precompilador SASS por su manejo de variables y su escritura basada en identación, El JSON para la prueba se encuentra en la ruta `.../testbold/src/app/data/sales.ts`, utilizado a través de servicios para simular el query a un API y la persistencia de los datos se logró por medio del almacenamiento local del navegador.
 
 # Gracias
 
