@@ -80,7 +80,10 @@
   <div class="table_container">
     <div class="table_header">Transacciones {{ selectedDateOption.name }}</div>
     <div class="table_card">
-      <table class="bold_table">
+      <div class="notice" *ngIf="filteredSaleList.length == 0">
+        No ha transacciónes en esta fecha
+      </div>
+      <table *ngIf="filteredSaleList.length > 0" class="bold_table">
         <thead>
           <tr>
             <th>Transacción</th>

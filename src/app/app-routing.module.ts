@@ -6,7 +6,7 @@ const routes: Routes = [{ path: 'sales', component: SalesComponent },
 { path: '**', redirectTo: '/sales', pathMatch: 'full' }, ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

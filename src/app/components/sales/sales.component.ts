@@ -36,7 +36,6 @@ export class SalesComponent implements OnInit {
   public selectedFilterOption = this.filterOptions[2];
 
   constructor(private salesService: SalesService) {
-
     this.getSalesData();
   }
 
