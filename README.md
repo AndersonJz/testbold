@@ -23,6 +23,10 @@ Una vez clonado este repositorio y estando en la carpeta raíz de este (.../test
 
 Para ejecutar este proyecto en modo developer debemos estar en la carpeta raíz y ejecutar el comando `ng serve -o`, añadiendo la etiqueta "-o" el comando abrirá en el navegador predeterminado una pestaña en la cual se puede hacer uso de la aplicación.
 
+## Sobre la prueba
+
+Elegí Angular ya que es el framework en que tengo más experiencia, para los estilos se escogió el precompilador SASS por su manejo de variables y su escritura basada en identación, El JSON para la prueba se encuentra en la ruta `.../testbold/src/app/data/sales.ts`, utilizado a través de servicios para simular el query a un API
+
 # Gracias
 
 Muchas gracias por visitar este proyecto y por la oportunidad de hacer parte de su equipo.
