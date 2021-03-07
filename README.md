@@ -4,6 +4,8 @@ Este proyecto construido en **Angular 11** tiene como finalidad demostrar habili
 
 Además en el siguiente documento se encuentran las instrucciones necesarias para desplegar la aplicación con sus respectivos requisitos para hacerlo correctamente.
 
+_En este enlace se encuentra funcionando la aplicación, por si supone alguna comodidad_: https://relaxed-bose-fc890b.netlify.app/
+
 ## Pre-requisitos
 
     Node Package Manager (npm) 12.14.1
